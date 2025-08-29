@@ -1,0 +1,100 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.destinos {
+  background: v.$gris-claro;
+  padding: 6rem 0 4rem 0;
+
+  &__titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: v.$azul-espacial;
+    font-weight: v.$black;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+  }
+
+  &__grid {
+    @include m.contenedor;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+  }
+
+  .destino {
+    position: relative;
+    overflow: hidden;
+    border-radius: v.$radio;
+    box-shadow: 0 4px 24px rgba(10,37,64,0.10);
+    background: v.$blanco;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(10,37,64,0.18);
+    }
+
+    .destinos__imagen {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: v.$radio v.$radio 0 0;
+      transition: filter 0.3s;
+      filter: brightness(0.93);
+    }
+
+    .destinos__nombre {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10,37,64,0.85);
+      color: v.$blanco;
+      font-weight: v.$bold;
+      font-size: 1.2rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(10,37,64,0.10);
+      pointer-events: none;
+    }
+  }
+}
+
+// Animación fade-in
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.9s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+// Animación escalonada para cada destino
+.destino:nth-child(1) { animation-delay: 0.1s; }
+.destino:nth-child(2) { animation-delay: 0.3s; }
+.destino:nth-child(3) { animation-delay: 0.5s; }
+
+// Responsive
+@media (max-width: v.$tablet) {
+  .destinos__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .destino .destinos__imagen {
+    height: 180px;
+  }
+}

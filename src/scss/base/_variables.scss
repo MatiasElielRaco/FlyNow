@@ -1,0 +1,38 @@
+// Fuentes
+$fuente-principal: "Inter", sans-serif;
+
+// Tamaño de Media Queries
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$xl_desktop: 1200px;
+
+// Colores base
+$negro: #18181a;
+$blanco: #ffffff;
+
+// Paleta principal
+$azul-espacial: #0a2540;      // Azul profundo (header/footer, logo)
+$azul-cielo: #3b82f6;         // Azul cielo (botones, enlaces)
+$lila: #a78bfa;               // Lila moderno (fondos, detalles)
+$lavanda: #f3f0ff;            // Lavanda claro (fondos suaves)
+$gris-claro: #f8fafc;         // Gris muy claro (fondos, secciones)
+$gris-medio: #64748b;         // Gris medio (texto secundario, bordes)
+$gris-oscuro: #374151;
+
+// Acentos
+$amarillo-sol: #ffe066;        // Amarillo cálido (iconos, detalles)
+$coral: #ff6b6b;               // Coral (llamados a la acción, hover)
+$verde-menta: #2dd4bf;         // Verde menta (éxito, detalles)
+
+// Fuentes
+$delgada: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+// Sombra
+$sombra: 0 .4rem 2.4rem rgba(10, 37, 64, 0.10);
+
+// Radio
+$radio: 1.2rem;

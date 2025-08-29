@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".fade-in"),t=new IntersectionObserver(function(e,t){e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("is-visible"),t.unobserve(e.target))})},{threshold:.15});e.forEach(e=>{t.observe(e)})});

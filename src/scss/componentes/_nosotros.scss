@@ -1,0 +1,71 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.nosotros {
+  background: v.$lavanda;
+  padding: 6rem 0;
+
+  &__contenido {
+    @include m.contenedor;
+    background: v.$blanco;
+    border-radius: v.$radio;
+    box-shadow: v.$sombra;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  &__titulo {
+    font-size: 3rem;
+    color: v.$azul-espacial;
+    font-weight: v.$black;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  &__texto {
+    font-size: 1.5rem;
+    color: v.$gris-oscuro;
+    line-height: 1.7;
+    font-weight: v.$regular;
+  }
+
+  &__valores { 
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    list-style: none;
+    padding: 0;
+
+  li {
+    color: v.$azul-espacial;
+    font-weight: v.$bold;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+
+    i {
+      color: v.$coral;
+      font-size: 3rem;
+    }
+  }
+  }
+}
+
+// Responsive
+@media (max-width: v.$tablet) {
+  .nosotros__contenido {
+    padding: 2rem 1rem;
+  }
+  .nosotros__titulo {
+    font-size: 2rem;
+  }
+  .nosotros__texto {
+    font-size: 1.05rem;
+  }
+}
+

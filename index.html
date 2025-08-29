@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+    <title>FlyNow</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <picture>
+                    <source srcset="build/img/flynowLogo.avif" type="image/avif">
+                    <source srcset="build/img/flynowLogo.webp" type="image/webp">
+                    <img src="build/img/flynowLogo.png" alt="FlyNow Logo">
+                </picture>
+            </div>
+            <nav class="navegacion">
+                <ul class="navegacion__lista">
+                    <li><a class="navegacion__enlace" href="#Iniico">Home</a></li>
+                    <li><a class="navegacion__enlace" href="#Nosotros">Nosotros</a></li>
+                    <li><a class="navegacion__enlace" href="#Paquetes">Paquetes</a></li>
+                    <li><a class="navegacion__enlace" href="#Testimoniales">Testimoniales</a></li>
+                    <li><a class="navegacion__enlace" href="#Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="Iniico">
+            <div class="hero__contenido">
+                <h1 class="hero__titulo">Viaja por el mundo con <span>FlyNow</span></h1>
+                <p class="hero__texto">Descubre destinos increíbles y vive experiencias inolvidables con nuestras ofertas exclusivas.</p>
+                <a href="#Paquetes" class="hero__boton">Explorar Paquetes</a>
+            </div>
+            <picture>
+                <source srcset="build/img/hero.avif" type="image/avif">
+                <source srcset="build/img/hero.webp" type="image/webp">
+                <img width="500" height="400" class="hero__imagen" src="build/img/hero.jpg" alt="Imagen de un destino turístico">
+            </picture>
+        </section>
+    </main>
+    <section class="nosotros">
+        <div class="nosotros__contenido" id="Nosotros">
+            <h2 class="nosotros__titulo">Sobre Nosotros</h2>
+            <p class="nosotros__texto">
+                En FlyNow, nos apasiona conectar a las personas con destinos increíbles alrededor del mundo. 
+                Con años de experiencia en la industria de viajes, ofrecemos paquetes personalizados que se adaptan a 
+                tus necesidades y deseos. Nuestro equipo de expertos está dedicado a brindarte un servicio 
+                excepcional y asegurarse de que cada viaje sea una experiencia inolvidable.
+            </p>
+            <ul class="nosotros__valores">
+                <li><i class="fa-solid fa-earth-americas"></i> Experiencia global</li>
+                <li><i class="fa-solid fa-users"></i> Atención personalizada</li>
+                <li><i class="fa-solid fa-plane"></i> Viajes a medida</li>
+            </ul>
+        </div>
+    </section>
+    <section class="destinos">
+        <h2 class="destinos__titulo">Destinos Destacados</h2>
+        <div class="destinos__grid">
+            <picture class="destino fade-in">
+                <source srcset="build/img/venecia.avif" type="image/avif">
+                <source srcset="build/img/venecia.webp" type="image/webp">
+                <img loading="lazy" width="300" height="300" class="destinos__imagen" src="build/img/venecia.jpg" alt="Venecia">
+                <span class="destinos__nombre">Venecia</span>
+            </picture>        
+            <picture class="destino fade-in">
+                <source srcset="build/img/grecia.avif" type="image/avif">
+                <source srcset="build/img/grecia.webp" type="image/webp">
+                <img loading="lazy" width="500" height="300" class="destinos__imagen" src="build/img/grecia.jpg" alt="Grecia">
+                <span class="destinos__nombre">Grecia</span>
+            </picture>        
+            <picture class="destino fade-in">
+                <source srcset="build/img/nueva-york.avif" type="image/avif">
+                <source srcset="build/img/nueva-york.webp" type="image/webp">
+                <img loading="lazy" width="500" height="300" class="destinos__imagen" src="build/img/nueva-york.jpg" alt="Nueva York">
+                <span class="destinos__nombre">Nueva York</span>
+            </picture>
+        </div>
+    </section>
+    <section class="paquetes">
+        <div class="paquetes__contenido" id="Paquetes">
+            <h2 class="paquetes__titulo">Nuestros Paquetes</h2>
+            <div class="paquetes__grid">
+                <div class="paquete">
+                    <picture>
+                        <source srcset="build/img/paris.avif" type="image/avif">
+                        <source srcset="build/img/paris.webp" type="image/webp">
+                        <img width="500" height="300" class="paquete__imagen" src="build/img/paris.jpg" alt="Imagen del paquete a París">
+                    </picture>
+                    <h3 class="paquete__nombre">París Romántico</h3>
+                    <p class="paquete__descripcion">Disfruta de 5 días en la ciudad del amor, 
+                        con visitas a la Torre Eiffel, el Louvre y paseos por el Sena.</p>
+                    <p class="paquete__precio">$1,200 por persona</p>
+                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                </div>
+                <div class="paquete">
+                    <picture>
+                        <source srcset="build/img/tokio.avif" type="image/avif">
+                        <source srcset="build/img/tokio.webp" type="image/webp">
+                        <img width="500" height="300" class="paquete__imagen" src="build/img/tokio.jpg" alt="Imagen del paquete a Tokio">
+                    </picture>
+                    <h3 class="paquete__nombre">Aventura en Tokio</h3>
+                    <p class="paquete__descripcion">Explora la vibrante ciudad de Tokio durante 7 días, incluyendo visitas a templos, 
+                        mercados y tecnología de vanguardia.</p>
+                    <p class="paquete__precio">$1,500 por persona</p>
+                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                </div>
+                <div class="paquete">
+                    <picture>
+                        <source srcset="build/img/sidney.avif" type="image/avif">
+                        <source srcset="build/img/sidney.webp" type="image/webp">
+                        <img width="500" height="300" class="paquete__imagen" src="build/img/sidney.jpg" alt="Imagen del paquete a Sídney">
+                    </picture>
+                    <h3 class="paquete__nombre">Explora Sídney</h3>
+                    <p class="paquete__descripcion">Vive 6 días en Sídney, con tours por la Ópera, playas y la Gran Barrera de Coral.</p>
+                    <p class="paquete__precio">$1,800 por persona</p>
+                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimoniales">
+        <div class="testimoniales__contenido" id="Testimoniales">
+            <h2 class="testimoniales__titulo">Lo que dicen nuestros clientes</h2>
+            <div class="testimoniales__grid">
+                <div class="testimonial">
+                    <p class="testimonial__texto">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ccc" style="vertical-align: middle;">
+                            <text x="15" y="20" font-size="24">&#8220;</text>
+                        </svg>
+                        Mi viaje a París con FlyNow fue simplemente increíble. 
+                        Todo estuvo perfectamente organizado y el servicio fue excepcional. ¡Definitivamente volveré a reservar con ellos!</p>
+                    <p class="testimonial__autor">- María G.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial__texto">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ccc" style="vertical-align: middle;">
+                            <text x="15" y="20" font-size="24">&#8220;</text>
+                        </svg>
+                        La aventura en Tokio superó todas mis expectativas. 
+                        Gracias a FlyNow por hacer de este viaje una experiencia inolvidable.</p>
+                    <p class="testimonial__autor">- Carlos M.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial__texto">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ccc" style="vertical-align: middle;">
+                            <text x="15" y="20" font-size="24">&#8220;</text>
+                        </svg>
+                        Explorar Sídney fue un sueño hecho realidad. 
+                        El equipo de FlyNow se encargó de todo, permitiéndome disfrutar al máximo.</p>
+                    <p class="testimonial__autor">- Ana L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mapa">
+        <iframe class="mapa__embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019456789123!2d-122.419415484681!3d37.77492977975959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sFlyNow%20Headquarters!5e0!3m2!1sen!2sus!4v1618311234567" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+            title="Ubicación de FlyNow"></iframe>
+    </section>
+    <section class="contacto">
+        <div class="contacto__contenido" id="Contacto">
+            <h2 class="contacto__titulo">Contáctanos</h2>
+            <form class="contacto__formulario" action="#" method="POST">
+                <div class="contacto__campo">
+                    <label class="contacto__label" for="nombre">Nombre:</label>
+                    <input class="contacto__input" type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="contacto__campo">
+                    <label class="contacto__label" for="email">Email:</label>
+                    <input class="contacto__input" type="email" id="email" name="email" required>
+                </div>
+                <div class="contacto__campo">
+                    <label class="contacto__label" for="mensaje">Mensaje:</label>
+                    <textarea class="contacto__textarea" id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button class="contacto__boton" type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__contenido">
+            <p class="footer__texto">&copy; 2024 FlyNow. Todos los derechos reservados.</p>
+            <div class="footer__redes">
+                <a class="footer__enlace" href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="footer__enlace" href="#" aria-label="Whastapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+        </div>
+    </footer>
+</body>
+
+    <script src="https://kit.fontawesome.com/9ae5830986.js" crossorigin="anonymous"></script>
+    <script src="build/js/app.js"></script>
+
+</html>
+
