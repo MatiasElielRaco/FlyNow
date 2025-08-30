@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
     <title>FlyNow</title>
 </head>
@@ -60,29 +62,6 @@
             </ul>
         </div>
     </section>
-    <section class="destinos">
-        <h2 class="destinos__titulo">Destinos Destacados</h2>
-        <div class="destinos__grid">
-            <picture class="destino fade-in">
-                <source srcset="build/img/venecia.avif" type="image/avif">
-                <source srcset="build/img/venecia.webp" type="image/webp">
-                <img loading="lazy" width="300" height="300" class="destinos__imagen" src="build/img/venecia.jpg" alt="Venecia">
-                <span class="destinos__nombre">Venecia</span>
-            </picture>        
-            <picture class="destino fade-in">
-                <source srcset="build/img/grecia.avif" type="image/avif">
-                <source srcset="build/img/grecia.webp" type="image/webp">
-                <img loading="lazy" width="500" height="300" class="destinos__imagen" src="build/img/grecia.jpg" alt="Grecia">
-                <span class="destinos__nombre">Grecia</span>
-            </picture>        
-            <picture class="destino fade-in">
-                <source srcset="build/img/nueva-york.avif" type="image/avif">
-                <source srcset="build/img/nueva-york.webp" type="image/webp">
-                <img loading="lazy" width="500" height="300" class="destinos__imagen" src="build/img/nueva-york.jpg" alt="Nueva York">
-                <span class="destinos__nombre">Nueva York</span>
-            </picture>
-        </div>
-    </section>
     <section class="paquetes">
         <div class="paquetes__contenido" id="Paquetes">
             <h2 class="paquetes__titulo">Nuestros Paquetes</h2>
@@ -96,9 +75,9 @@
                     <h3 class="paquete__nombre">París Romántico</h3>
                     <p class="paquete__descripcion">Disfruta de 5 días en la ciudad del amor, 
                         con visitas a la Torre Eiffel, el Louvre y paseos por el Sena.</p>
-                    <p class="paquete__precio">$1,200 por persona</p>
-                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
-                </div>
+                        <p class="paquete__precio">$1,200 por persona</p>
+                        <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                    </div>
                 <div class="paquete">
                     <picture>
                         <source srcset="build/img/tokio.avif" type="image/avif">
@@ -108,8 +87,8 @@
                     <h3 class="paquete__nombre">Aventura en Tokio</h3>
                     <p class="paquete__descripcion">Explora la vibrante ciudad de Tokio durante 7 días, incluyendo visitas a templos, 
                         mercados y tecnología de vanguardia.</p>
-                    <p class="paquete__precio">$1,500 por persona</p>
-                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                        <p class="paquete__precio">$1,500 por persona</p>
+                        <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
                 </div>
                 <div class="paquete">
                     <picture>
@@ -122,6 +101,136 @@
                     <p class="paquete__precio">$1,800 por persona</p>
                     <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
                 </div>
+                <div class="paquete">
+                    <picture>
+                        <source srcset="build/img/grecia.avif" type="image/avif">
+                        <source srcset="build/img/grecia.webp" type="image/webp">
+                        <img width="500" height="300" class="paquete__imagen" src="build/img/grecia.jpg" alt="Imagen del paquete a Santorini">
+                    </picture>
+                    <h3 class="paquete__nombre">Vive Santorini</h3>
+                    <p class="paquete__descripcion">Viaja durante 7 días a la mágica isla de Santorini, famosa por sus impresionantes puestas de sol y arquitectura blanca.</p>
+                    <p class="paquete__precio">$2,200 por persona</p>
+                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                </div>
+                <div class="paquete">
+                    <picture>
+                        <source srcset="build/img/florencia.avif" type="image/avif">
+                        <source srcset="build/img/florencia.webp" type="image/webp">
+                        <img width="500" height="300" class="paquete__imagen" src="build/img/florencia.jpg" alt="Imagen del paquete a Sídney">
+                    </picture>
+                    <h3 class="paquete__nombre">Descubre Florencia</h3>
+                    <p class="paquete__descripcion">La cuna del Renacimiento te espera en un viaje de 5 días por Florencia, incluyendo visitas a museos y la famosa catedral.</p>
+                    <p class="paquete__precio">$1,500 por persona</p>
+                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                </div>
+                <div class="paquete">
+                    <picture>
+                        <source srcset="build/img/barcelona.avif" type="image/avif">
+                        <source srcset="build/img/barcelona.webp" type="image/webp">
+                        <img width="500" height="300" class="paquete__imagen" src="build/img/barcelona.jpg" alt="Imagen del paquete a Sídney">
+                    </picture>
+                    <h3 class="paquete__nombre">Disfruta Barcelona</h3>
+                    <p class="paquete__descripcion"> Vive 10 días en la vibrante ciudad de Barcelona, explorando la Sagrada Familia, el Parque Güell y las playas de la Costa Brava.</p>
+                    <p class="paquete__precio">$1,800 por persona</p>
+                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="destinos">
+        <h2 class="destinos__titulo">Destinos Destacados</h2>
+        <div class="destinos__grid">
+            <!-- Solo la parte relevante del Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="destinos__img-container">
+                            <picture>
+                                <source srcset="build/img/venecia.avif" type="image/avif">
+                                <source srcset="build/img/venecia.webp" type="image/webp">
+                                <img loading="lazy" class="destinos__imagen" src="build/img/venecia.jpg" alt="Venecia">
+                            </picture>
+                            <span class="destinos__overlay">
+                                <span class="destinos__nombre">Venecia</span>
+                                <p class="destinos__descripcion">Explora los canales y la arquitectura única de Venecia. <br>
+                                    Disfruta de un paseo en góndola y descubre la rica historia de esta ciudad mágica.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destinos__img-container">
+                            <picture>
+                                <source srcset="build/img/patagonia.avif" type="image/avif">
+                                <source srcset="build/img/patagonia.webp" type="image/webp">
+                                <img loading="lazy" class="destinos__imagen" src="build/img/patagonia.jpg" alt="Patagonia">
+                            </picture>
+                            <span class="destinos__overlay">
+                                <span class="destinos__nombre">Patagonia</span>
+                                <p class="destinos__descripcion">Descubre las maravillas de la Patagonia Argentina. <br>
+                                    Desde los glaciares de El Calafate hasta el Fin del Mundo.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destinos__img-container">
+                            <picture>
+                                <source srcset="build/img/nueva-york.avif" type="image/avif">
+                                <source srcset="build/img/nueva-york.webp" type="image/webp">
+                                <img loading="lazy" class="destinos__imagen" src="build/img/nueva-york.jpg" alt="Nueva York">
+                            </picture>
+                            <span class="destinos__overlay">
+                                <span class="destinos__nombre">Nueva York</span>
+                                <p class="destinos__descripcion">Visita la ciudad que nunca duerme. <br> 
+                                    Disfruta de sus icónicos rascacielos y vibrante vida nocturna.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destinos__img-container">
+                            <picture>
+                                <source srcset="build/img/egipto.avif" type="image/avif">
+                                <source srcset="build/img/egipto.webp" type="image/webp">
+                                <img loading="lazy" class="destinos__imagen" src="build/img/egipto.jpg" alt="Egipto">
+                            </picture>
+                            <span class="destinos__overlay">
+                                <span class="destinos__nombre">Egipto</span>
+                                <p class="destinos__descripcion">Explora las pirámides y la rica historia de Egipto. <br>
+                                    Navega por el Nilo y descubre los tesoros de la antigüedad.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destinos__img-container">
+                            <picture>
+                                <source srcset="build/img/hawai.avif" type="image/avif">
+                                <source srcset="build/img/hawai.webp" type="image/webp">
+                                <img loading="lazy" class="destinos__imagen" src="build/img/hawai.jpg" alt="Hawái">
+                            </picture>
+                            <span class="destinos__overlay">
+                                <span class="destinos__nombre">Hawái</span>
+                                <p class="destinos__descripcion">Visita las playas de arena blanca y aguas cristalinas de Hawái. <br>
+                                    Disfruta de su cultura única y paisajes impresionantes.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destinos__img-container">
+                            <picture>
+                                <source srcset="build/img/amsterdam.avif" type="image/avif">
+                                <source srcset="build/img/amsterdam.webp" type="image/webp">
+                                <img loading="lazy" class="destinos__imagen" src="build/img/amsterdam.jpg" alt="Ámsterdam">
+                            </picture>
+                            <span class="destinos__overlay">
+                                <span class="destinos__nombre">Ámsterdam</span>
+                                <p class="destinos__descripcion">Visita la ciudad de los canales. <br>
+                                    Disfruta de su rica historia, arte y cultura.</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -131,28 +240,21 @@
             <div class="testimoniales__grid">
                 <div class="testimonial">
                     <p class="testimonial__texto">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ccc" style="vertical-align: middle;">
-                            <text x="15" y="20" font-size="24">&#8220;</text>
-                        </svg>
-                        Mi viaje a París con FlyNow fue simplemente increíble. 
+                        <span>&#8220;</span>
+                        Mi viaje a París con FlyNow fue simplemente increíble.
                         Todo estuvo perfectamente organizado y el servicio fue excepcional. ¡Definitivamente volveré a reservar con ellos!</p>
                     <p class="testimonial__autor">- María G.</p>
                 </div>
                 <div class="testimonial">
                     <p class="testimonial__texto">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ccc" style="vertical-align: middle;">
-                            <text x="15" y="20" font-size="24">&#8220;</text>
-                        </svg>
+                        <span>&#8220;</span>
                         La aventura en Tokio superó todas mis expectativas. 
                         Gracias a FlyNow por hacer de este viaje una experiencia inolvidable.</p>
                     <p class="testimonial__autor">- Carlos M.</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial__texto">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ccc" style="vertical-align: middle;">
-                            <text x="15" y="20" font-size="24">&#8220;</text>
-                        </svg>
-                        Explorar Sídney fue un sueño hecho realidad. 
+                    <p class="testimonial__texto"><span>&#8220;</span>
+                        Explorar Sídney fue un sueño hecho realidad.
                         El equipo de FlyNow se encargó de todo, permitiéndome disfrutar al máximo.</p>
                     <p class="testimonial__autor">- Ana L.</p>
                 </div>
@@ -191,14 +293,16 @@
                 <a class="footer__enlace" href="#" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a class="footer__enlace" href="#" aria-label="Whastapp">
-                    <i class="fa-brands fa-whatsapp"></i>
+                <a class="footer__enlace" href="#" aria-label="Whatsapp">
+                     <i class="fa-brands fa-whatsapp"></i> 
                 </a>
-        </div>
+            </div>
     </footer>
 </body>
 
     <script src="https://kit.fontawesome.com/9ae5830986.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="build/js/app.js"></script>
 
 </html>

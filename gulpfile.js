@@ -23,8 +23,8 @@ export function css( done ) {
         .pipe( sass({
             style: 'compressed'
         }).on('error', sass.logError) )
-        .pipe( dest('build/css', {sourcemaps: '.'}) );
-    done()
+        .pipe(dest('build/css'));
+    done();
 }
 
 

@@ -1,0 +1,88 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.testimoniales {
+  background: v.$lavanda;
+  padding: 6rem 0;
+  margin-top: 7rem;
+
+  &__contenido {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  &__titulo {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: v.$bold;
+    color: v.$azul-espacial;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 3rem;
+    align-items: stretch;
+  }
+}
+
+.testimonial {
+  background: v.$blanco;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(58, 90, 180, 0.10);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 22rem;
+  transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+
+  // Animación de entrada con AOS
+  &[data-aos] {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  &[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 48px rgba(58, 90, 180, 0.18);
+  }
+
+
+  &__texto {
+    position: relative;
+    color: v.$gris-oscuro;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+
+    span {
+        position: absolute;
+        z-index: 1;
+        font-size: 6rem;
+        top: -4rem;
+        left: -2rem;
+        color: v.$azul-cielo;
+    }
+  }
+
+  &__autor {
+    color: v.$azul-cielo;
+    font-weight: v.$bold;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: auto;
+  }
+}

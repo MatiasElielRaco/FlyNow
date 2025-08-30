@@ -1,0 +1,31 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer {
+    background-color: v.$azul-espacial;
+
+    &__contenido {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__texto {
+        color: v.$blanco;
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 1.6rem;
+        font-weight: v.$regular;
+    }
+
+    &__redes {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__enlace {
+        color: v.$blanco;
+        font-size: 2rem;
+    }
+}

@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".fade-in"),t=new IntersectionObserver(function(e,t){e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("is-visible"),t.unobserve(e.target))})},{threshold:.15});e.forEach(e=>{t.observe(e)})});
+const swiper=new Swiper(".mySwiper",{slidesPerView:1,spaceBetween:30,effect:"fade",navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0}});
