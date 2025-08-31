@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".header__mobile");
+  const nav = document.querySelector(".navegacion");
+  const links = document.querySelectorAll(".navegacion__enlace");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("is-active");
+  });
+
+  // Scroll suave + cerrar menú al hacer clic
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Cerrar menú en mobile
+      nav.classList.remove("is-active");
+    });
+  });
+});
+
 const swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -56,5 +82,7 @@ const botones = document.querySelectorAll(".paquete__boton");
         body.classList.remove("no-scroll");
       });
   }
+
+
 
 
