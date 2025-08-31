@@ -1,10 +1,6 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
-.mapa {
-    margin-top: 5rem;
-}
-
 .contacto {
   position: relative;
   background: v.$blanco;

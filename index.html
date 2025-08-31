@@ -49,24 +49,49 @@
     <section class="nosotros">
         <div class="nosotros__contenido" id="Nosotros">
             <h2 class="nosotros__titulo">Sobre Nosotros</h2>
-            <p class="nosotros__texto">
-                En FlyNow, nos apasiona conectar a las personas con destinos increíbles alrededor del mundo. 
-                Con años de experiencia en la industria de viajes, ofrecemos paquetes personalizados que se adaptan a 
-                tus necesidades y deseos. Nuestro equipo de expertos está dedicado a brindarte un servicio 
-                excepcional y asegurarse de que cada viaje sea una experiencia inolvidable.
-            </p>
-            <ul class="nosotros__valores">
-                <li><i class="fa-solid fa-earth-americas"></i> Experiencia global</li>
-                <li><i class="fa-solid fa-users"></i> Atención personalizada</li>
-                <li><i class="fa-solid fa-plane"></i> Viajes a medida</li>
-            </ul>
+            <div class="nosotros__flex">
+                <div class="nosotros__texto">
+                    <p>
+                        En FlyNow, nos apasiona conectar a las personas con destinos increíbles alrededor del mundo. 
+                        Con años de experiencia en la industria de viajes, ofrecemos paquetes personalizados que se adaptan a 
+                        tus necesidades y deseos. Nuestro equipo de expertos está dedicado a brindarte un servicio 
+                        excepcional y asegurarse de que cada viaje sea una experiencia inolvidable.
+                    </p>
+                    <ul class="nosotros__valores">
+                        <li><i class="fa-solid fa-earth-americas"></i> Experiencia global</li>
+                        <li><i class="fa-solid fa-users"></i> Atención personalizada</li>
+                        <li><i class="fa-solid fa-plane"></i> Viajes a medida</li>
+                    </ul>
+                    <div class="nosotros__contadores">
+                        <div class="nosotros__contador">
+                            <span class="nosotros__contador-num">10+</span>
+                            <span class="nosotros__contador-label">Años de experiencia</span>
+                        </div>
+                        <div class="nosotros__contador">
+                            <span class="nosotros__contador-num">500+</span>
+                            <span class="nosotros__contador-label">Viajes organizados</span>
+                        </div>
+                        <div class="nosotros__contador">
+                            <span class="nosotros__contador-num">100+</span>
+                            <span class="nosotros__contador-label">Destinos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros__imagen">
+                    <picture>
+                        <source srcset="build/img/equipo.avif" type="image/avif">
+                        <source srcset="build/img/equipo.webp" type="image/webp">
+                        <img data-aos="fade-left" data-aos-duration="1000" src="build/img/equipo.jpg" alt="Nuestro equipo FlyNow" loading="lazy">
+                    </picture>
+                </div>
+            </div>
         </div>
     </section>
     <section class="paquetes">
         <div class="paquetes__contenido" id="Paquetes">
             <h2 class="paquetes__titulo">Nuestros Paquetes</h2>
             <div class="paquetes__grid">
-                <div class="paquete">
+                <div class="paquete" data-aos="zoom-in-up" data-aos-duration="1000">
                     <picture>
                         <source srcset="build/img/paris.avif" type="image/avif">
                         <source srcset="build/img/paris.webp" type="image/webp">
@@ -76,9 +101,9 @@
                     <p class="paquete__descripcion">Disfruta de 5 días en la ciudad del amor, 
                         con visitas a la Torre Eiffel, el Louvre y paseos por el Sena.</p>
                         <p class="paquete__precio">$1,200 por persona</p>
-                        <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                        <button value="Paris" type="button" class="paquete__boton">Reservar Ahora</button>
                     </div>
-                <div class="paquete">
+                <div class="paquete" data-aos="zoom-in-up" data-aos-duration="1000">
                     <picture>
                         <source srcset="build/img/tokio.avif" type="image/avif">
                         <source srcset="build/img/tokio.webp" type="image/webp">
@@ -88,9 +113,9 @@
                     <p class="paquete__descripcion">Explora la vibrante ciudad de Tokio durante 7 días, incluyendo visitas a templos, 
                         mercados y tecnología de vanguardia.</p>
                         <p class="paquete__precio">$1,500 por persona</p>
-                        <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                        <button value="Tokio" type="button" class="paquete__boton">Reservar Ahora</button>
                 </div>
-                <div class="paquete">
+                <div class="paquete" data-aos="zoom-in-up" data-aos-duration="1000">
                     <picture>
                         <source srcset="build/img/sidney.avif" type="image/avif">
                         <source srcset="build/img/sidney.webp" type="image/webp">
@@ -99,9 +124,9 @@
                     <h3 class="paquete__nombre">Explora Sídney</h3>
                     <p class="paquete__descripcion">Vive 6 días en Sídney, con tours por la Ópera, playas y la Gran Barrera de Coral.</p>
                     <p class="paquete__precio">$1,800 por persona</p>
-                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                    <button value="Sidney" type="button" class="paquete__boton">Reservar Ahora</button>
                 </div>
-                <div class="paquete">
+                <div class="paquete" data-aos="zoom-in-up" data-aos-duration="1000">
                     <picture>
                         <source srcset="build/img/grecia.avif" type="image/avif">
                         <source srcset="build/img/grecia.webp" type="image/webp">
@@ -110,9 +135,9 @@
                     <h3 class="paquete__nombre">Vive Santorini</h3>
                     <p class="paquete__descripcion">Viaja durante 7 días a la mágica isla de Santorini, famosa por sus impresionantes puestas de sol y arquitectura blanca.</p>
                     <p class="paquete__precio">$2,200 por persona</p>
-                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                    <button value="Santorini" type="button" class="paquete__boton">Reservar Ahora</button>
                 </div>
-                <div class="paquete">
+                <div class="paquete" data-aos="zoom-in-up" data-aos-duration="1000">
                     <picture>
                         <source srcset="build/img/florencia.avif" type="image/avif">
                         <source srcset="build/img/florencia.webp" type="image/webp">
@@ -121,9 +146,9 @@
                     <h3 class="paquete__nombre">Descubre Florencia</h3>
                     <p class="paquete__descripcion">La cuna del Renacimiento te espera en un viaje de 5 días por Florencia, incluyendo visitas a museos y la famosa catedral.</p>
                     <p class="paquete__precio">$1,500 por persona</p>
-                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                    <button value="Florencia" type="button" class="paquete__boton">Reservar Ahora</button>
                 </div>
-                <div class="paquete">
+                <div class="paquete" data-aos="zoom-in-up" data-aos-duration="1000">
                     <picture>
                         <source srcset="build/img/barcelona.avif" type="image/avif">
                         <source srcset="build/img/barcelona.webp" type="image/webp">
@@ -132,7 +157,7 @@
                     <h3 class="paquete__nombre">Disfruta Barcelona</h3>
                     <p class="paquete__descripcion"> Vive 10 días en la vibrante ciudad de Barcelona, explorando la Sagrada Familia, el Parque Güell y las playas de la Costa Brava.</p>
                     <p class="paquete__precio">$1,800 por persona</p>
-                    <a href="#Contacto" class="paquete__boton">Reservar Ahora</a>
+                    <button value="Barcelona" type="button" class="paquete__boton">Reservar Ahora</button>
                 </div>
             </div>
         </div>
@@ -267,7 +292,7 @@
             title="Ubicación de FlyNow"></iframe>
     </section>
     <section class="contacto">
-        <div class="contacto__contenido" id="Contacto">
+        <div class="contacto__contenido" id="Contacto" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
             <h2 class="contacto__titulo">Contáctanos</h2>
             <form class="contacto__formulario" action="#" method="POST">
                 <div class="contacto__campo">
@@ -288,7 +313,7 @@
     </section>
     <footer class="footer">
         <div class="footer__contenido">
-            <p class="footer__texto">&copy; 2024 FlyNow. Todos los derechos reservados.</p>
+            <p class="footer__texto">&copy; 2025 FlyNow. Todos los derechos reservados.</p>
             <div class="footer__redes">
                 <a class="footer__enlace" href="#" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
@@ -304,6 +329,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="build/js/app.js"></script>
-
+    <script>
+        AOS.init();
+    </script>
 </html>
 

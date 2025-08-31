@@ -1,0 +1,136 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+@use 'sass:color' as c;
+
+
+/* Fondo de la modal (overlay) */
+.modal {
+  position: fixed; /* importante: que quede fijo en toda la ventana */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* oscurece toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* que quede por encima de todo */
+
+  &__contenido {
+    position: relative;
+    z-index: 1001;
+    width: 100%;
+    max-width: 50rem;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(58, 90, 180, 0.10);
+    padding: 4rem 3rem 3rem 3rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: aparecer 0.8s ease; /* animación de entrada */
+  
+    @keyframes aparecer {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+}
+/* Título */
+&__titulo {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: v.$bold;
+  color: v.$azul-espacial;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Texto */
+&__texto {
+  text-align: center;
+  font-size: 1.4rem;
+  color: v.$gris-oscuro;
+  margin: 0;
+}
+
+/* Formulario */
+&__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &--input, &--select {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    background: v.$gris-claro;
+    font-size: 1.4rem;
+    color: v.$gris-oscuro;
+    box-shadow: 0 2px 8px rgba(58, 90, 180, 0.06);
+    transition: box-shadow 0.2s;
+    &:focus {
+      outline: 2px solid v.$azul-cielo;
+      box-shadow: 0 4px 16px rgba(58, 90, 180, 0.12);
+    }
+  }
+
+  &--select {
+    cursor: pointer;
+
+    option[disabled] {
+      color: v.$gris-oscuro;
+      opacity: 0.7;
+    }
+  }
+
+  input[type="submit"] {
+    background: linear-gradient(90deg, v.$azul-cielo 60%, v.$lila 100%);
+    color: #fff;
+    font-weight: v.$bold;
+    font-size: 1.3rem;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(58, 90, 180, 0.10);
+    transition: background 0.3s, transform 0.2s;
+    &:hover {
+      background: linear-gradient(90deg, v.$lila 60%, v.$azul-cielo 100%);
+      transform: scale(1.05);
+    }
+  }
+    
+}
+    /* Botón cerrar */
+    &__cerrar {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: v.$bold;
+    color: v.$gris-oscuro;
+    cursor: pointer;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.2);
+        color: v.$azul-espacial;
+    }
+  }
+}
+
+/* Contenido de la modal */
+
+
+/* Desactiva el scroll del body cuando está la modal */
+.no-scroll {
+  overflow: hidden;
+}
